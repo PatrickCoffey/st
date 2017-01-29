@@ -964,21 +964,12 @@ void
 bpress(XEvent *e)
 {
 	struct timespec now;
-//	MouseShortcut *ms;
 	MouseKey *mk;
 
 	if (IS_SET(MODE_MOUSE) && !(e->xbutton.state & forceselmod)) {
 		mousereport(e);
 		return;
 	}
-
-//	for (ms = mshortcuts; ms < mshortcuts + LEN(mshortcuts); ms++) {
-//		if (e->xbutton.button == ms->b
-//				&& match(ms->mask, e->xbutton.state)) {
-//			ttysend(ms->s, strlen(ms->s));
-//			return;
-//		}
-//	}
 
 	for (mk = mkeys; mk < mkeys + LEN(mkeys); mk++) {
 		if (e->xbutton.button == mk->b

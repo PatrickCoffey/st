@@ -152,20 +152,8 @@ static unsigned int mouseshape = XC_xterm;
 static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
 
-/*
- * Internal mouse shortcuts.
- * Beware that overloading Button1 will disable the selection.
- */
-//static MouseShortcut mshortcuts[] = {
-	/* button               mask            string */
-//	{ Button2,              XK_NO_MOD,      "\031" },
-//	{ Button3,              XK_NO_MOD,      "\005" },
-//};
-
 static MouseKey mkeys[] = {
 	/* button               mask            function        argument */
-//	{ Button4,              ShiftMask,      kscrollup,      {.i =  1} },
-//	{ Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
 	{ Button4,              XK_NO_MOD,      kscrollup,      {.i =  1} },
 	{ Button5,              XK_NO_MOD,      kscrolldown,    {.i =  1} },
 };
