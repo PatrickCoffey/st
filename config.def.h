@@ -7,7 +7,7 @@
  */
 static char font[] = "monofur for Powerline:pixelsize=30:style=SemiCondensed:antialias=true";
 static int borderpx = 2;
-#define histsize 2000
+#define histsize 10000
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -84,7 +84,7 @@ static char termname[] = "st-256color";
 static unsigned int tabspaces = 8;
 
 /* bg opacity */
-static const int alpha = 0xdd;
+static const int alpha = 0xaa;
 
 //------------------------------------------------------------------------------
 
