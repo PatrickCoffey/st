@@ -86,34 +86,35 @@ static unsigned int tabspaces = 8;
 /* bg opacity */
 static const int alpha = 0xaa;
 
-//------------------------------------------------------------------------------
+// THEME_START
+/* Theme: Base16 - railscasts */
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#322931", /* black   */
-  [1] = "#dd464c", /* red     */
-  [2] = "#8fc13e", /* green   */
-  [3] = "#fdcc59", /* yellow  */
-  [4] = "#1290bf", /* blue    */
-  [5] = "#c85e7c", /* magenta */
-  [6] = "#149b93", /* cyan    */
-  [7] = "#b9b5b8", /* white   */
+  [0] = "#2b2b2b", /* black   */
+  [1] = "#da4939", /* red     */
+  [2] = "#a5c261", /* green   */
+  [3] = "#ffc66d", /* yellow  */
+  [4] = "#6d9cbe", /* blue    */
+  [5] = "#b6b3eb", /* magenta */
+  [6] = "#519f50", /* cyan    */
+  [7] = "#e6e1dc", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#797379", /* black   */
-  [9]  = "#fd8b19", /* red     */
-  [10] = "#433b42", /* green   */
-  [11] = "#5c545b", /* yellow  */
-  [12] = "#989498", /* blue    */
-  [13] = "#d5d3d5", /* magenta */
-  [14] = "#b33508", /* cyan    */
-  [15] = "#ffffff", /* white   */
+  [8]  = "#5a647e", /* black   */
+  [9]  = "#cc7833", /* red     */
+  [10] = "#272935", /* green   */
+  [11] = "#3a4055", /* yellow  */
+  [12] = "#d4cfc9", /* blue    */
+  [13] = "#f4f1ed", /* magenta */
+  [14] = "#bc9458", /* cyan    */
+  [15] = "#f9f7f3", /* white   */
 
   /* special colors */
-  [256] = "#111111", /* background */
-  [257] = "#b9b5b8", /* foreground */
+  [256] = "#2b2b2b", /* background */
+  [257] = "#e6e1dc", /* foreground */
 };
 
 /*
@@ -133,8 +134,7 @@ static unsigned int defaultrcs = 256;
 static unsigned int defaultitalic = 7;
 static unsigned int defaultunderline = 7;
 
-
-//------------------------------------------------------------------------------
+// THEME_END
 
 /*
  * Default shape of cursor
@@ -152,20 +152,8 @@ static unsigned int mouseshape = XC_xterm;
 static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
 
-/*
- * Internal mouse shortcuts.
- * Beware that overloading Button1 will disable the selection.
- */
-//static MouseShortcut mshortcuts[] = {
-	/* button               mask            string */
-//	{ Button2,              XK_NO_MOD,      "\031" },
-//	{ Button3,              XK_NO_MOD,      "\005" },
-//};
-
 static MouseKey mkeys[] = {
 	/* button               mask            function        argument */
-//	{ Button4,              ShiftMask,      kscrollup,      {.i =  1} },
-//	{ Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
 	{ Button4,              XK_NO_MOD,      kscrollup,      {.i =  1} },
 	{ Button5,              XK_NO_MOD,      kscrolldown,    {.i =  1} },
 };

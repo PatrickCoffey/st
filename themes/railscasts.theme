@@ -1,0 +1,47 @@
+/* Theme: Base16 - railscasts */
+
+/* Terminal colors (16 first used in escape sequence) */
+static const char *colorname[] = {
+
+  /* 8 normal colors */
+  [0] = "#2b2b2b", /* black   */
+  [1] = "#da4939", /* red     */
+  [2] = "#a5c261", /* green   */
+  [3] = "#ffc66d", /* yellow  */
+  [4] = "#6d9cbe", /* blue    */
+  [5] = "#b6b3eb", /* magenta */
+  [6] = "#519f50", /* cyan    */
+  [7] = "#e6e1dc", /* white   */
+
+  /* 8 bright colors */
+  [8]  = "#5a647e", /* black   */
+  [9]  = "#cc7833", /* red     */
+  [10] = "#272935", /* green   */
+  [11] = "#3a4055", /* yellow  */
+  [12] = "#d4cfc9", /* blue    */
+  [13] = "#f4f1ed", /* magenta */
+  [14] = "#bc9458", /* cyan    */
+  [15] = "#f9f7f3", /* white   */
+
+  /* special colors */
+  [256] = "#2b2b2b", /* background */
+  [257] = "#e6e1dc", /* foreground */
+};
+
+/*
+ * Default colors (colorname index)
+ * foreground, background, cursor
+ */
+static unsigned int defaultfg = 257;
+static unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
+
