@@ -42,7 +42,7 @@ def parse_def_config():
                     # throw away these lines between tags
                     if close_tag in line:
                         for line in f:
-                           config_end.append(line)
+                            config_end.append(line)
 
 def output_config_file():
     with open(output_file, 'w+') as f:
