@@ -17,3 +17,4 @@ This is my fork of ST, it was started form the 0.7 version of the AUR package. C
   * Work out if a broke anything allowing scroll without holding shift key (seems to be alright?)
   * Remove commented code blocks when sure its all good
   * Adjust color theme to Base16 Hopscotch, (write a tool to do this for me?)
+  * Create PKGBUILD for makepkg on arch. (should be trivial once i have this git repo set up properly... yes im a nub)
