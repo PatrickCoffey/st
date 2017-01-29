@@ -86,63 +86,55 @@ static unsigned int tabspaces = 8;
 /* bg opacity */
 static const int alpha = 0xdd;
 
+//------------------------------------------------------------------------------
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
-//	/* 8 normal colors */
-//	"black",
-//	"red3",
-//	"green3",
-//	"yellow3",
-//	"blue2",
-//	"magenta3",
-//	"cyan3",
-//	"gray90",
+  /* 8 normal colors */
+  [0] = "#322931", /* black   */
+  [1] = "#dd464c", /* red     */
+  [2] = "#8fc13e", /* green   */
+  [3] = "#fdcc59", /* yellow  */
+  [4] = "#1290bf", /* blue    */
+  [5] = "#c85e7c", /* magenta */
+  [6] = "#149b93", /* cyan    */
+  [7] = "#b9b5b8", /* white   */
 
-	/* 8 bright colors */
-//	"gray50",
-//	"red",
-//	"green",
-//	"yellow",
-//	"#5c5cff",
-//	"magenta",
-//	"cyan",
-//	"white",
+  /* 8 bright colors */
+  [8]  = "#797379", /* black   */
+  [9]  = "#fd8b19", /* red     */
+  [10] = "#433b42", /* green   */
+  [11] = "#5c545b", /* yellow  */
+  [12] = "#989498", /* blue    */
+  [13] = "#d5d3d5", /* magenta */
+  [14] = "#b33508", /* cyan    */
+  [15] = "#ffffff", /* white   */
 
-	/* solarized dark */
-	"#073642",  /*   0: black    */
-	"#dc322f",  /*   1: red      */
-	"#859900",  /*   2: green    */
-	"#b58900",  /*   3: yellow   */
-	"#268bd2",  /*   4: blue     */
-	"#d33682",  /*   5: magenta  */
-	"#2aa198",  /*   6: cyan     */
-	"#eee8d5",  /*   7: white    */
-	"#002b36",  /*   8: brblack  */
-	"#cb4b16",  /*   9: brred    */
-	"#586e75",  /*  10: brgreen  */
-	"#657b83",  /*  11: bryellow */
-	"#839496",  /*  12: brblue   */
-	"#6c71c4",  /*  13: brmagenta*/
-	"#93a1a1",  /*  14: brcyan   */
-	"#fdf6e3",  /*  15: brwhite  */
-
-	[255] = 0,  /* other colors follow */
-
-	"#839496",  /*  12: brblue   */
-	"#073642",  /*   0: black    */
-
+  /* special colors */
+  [256] = "#322931", /* background */
+  [257] = "#b9b5b8", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-static unsigned int defaultfg = 7;
-static unsigned int defaultbg = 257;
-static unsigned int defaultcs = 1;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultfg = 257;
+static unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
+
+
+//------------------------------------------------------------------------------
 
 /*
  * Default shape of cursor
@@ -159,14 +151,6 @@ static unsigned int cursorshape = 2;
 static unsigned int mouseshape = XC_xterm;
 static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
-
-/*
- * Colors used, when the specific fg == defaultfg. So in reverse mode this
- * will reverse too. Another logic would only make the simple feature too
- * complex.
- */
-static unsigned int defaultitalic = 11;
-static unsigned int defaultunderline = 7;
 
 /*
  * Internal mouse shortcuts.
