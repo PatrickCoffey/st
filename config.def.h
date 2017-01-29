@@ -86,8 +86,7 @@ static unsigned int tabspaces = 8;
 /* bg opacity */
 static const int alpha = 0xaa;
 
-//------------------------------------------------------------------------------
-
+// THEME_START
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
@@ -132,9 +131,7 @@ static unsigned int defaultrcs = 256;
  */
 static unsigned int defaultitalic = 7;
 static unsigned int defaultunderline = 7;
-
-
-//------------------------------------------------------------------------------
+// THEME_END
 
 /*
  * Default shape of cursor
