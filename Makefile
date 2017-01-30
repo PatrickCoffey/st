@@ -57,4 +57,11 @@ uninstall:
 	@echo removing manual page from ${DESTDIR}${MANPREFIX}/man1
 	@rm -f ${DESTDIR}${MANPREFIX}/man1/st.1
 
-.PHONY: all options clean dist install uninstall
+theme:  clean
+	ST_THEME?=$DEFAULT_THEME
+	@echo replacing config.h with $(ST_THEME) themed version of config.def.h
+	python chtheme.py $(ST_THEME) > config.h
+	@echo themed ($(ST_THEME)) config.h created!
+	
+
+.PHONY: all options clean dist install uninstall theme

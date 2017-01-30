@@ -1,5 +1,5 @@
 # st version
-VERSION = 0.7
+VERSION = 0.7.schlerp
 
 # Customize below to fit your system
 
@@ -25,4 +25,3 @@ LDFLAGS += -g ${LIBS}
 
 # compiler and linker
 # CC = cc
-
