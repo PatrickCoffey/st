@@ -58,7 +58,7 @@ uninstall:
 	@rm -f ${DESTDIR}${MANPREFIX}/man1/st.1
 
 theme:  clean
-	ST_THEME?=$DEFAULT_THEME
+	ST_THEME?="$DEFAULT_THEME"
 	@echo replacing config.h with $(ST_THEME) themed version of config.def.h
 	python chtheme.py $(ST_THEME) > config.h
 	@echo themed ($(ST_THEME)) config.h created!
