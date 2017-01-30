@@ -13,8 +13,8 @@ This is my fork of ST, it was started form the 0.7 version of the AUR package. C
 
 ### todo
 
-  * Configure font size a bit more
-  * Work out if a broke anything allowing scroll without holding shift key (seems to be alright?)
-  * Remove commented code blocks when sure its all good
+  * ~~Configure font size a bit more~~ Done!
+  * ~~Work out if a broke anything allowing scroll without holding shift key~~ Done! (seems all good :D)
+  * ~~Remove commented code blocks when sure its all good~~ Done!
   * ~~Adjust color theme to Base16 Hopscotch, (write a tool to do this for me?)~~ - #archlinux rnabinger got me onto http://terminal.sexy, god mode enabled!
-  * ~~Create PKGBUILD for makepkg on arch. (should be trivial once i have this git repo set up properly... yes im a nub)~~ - not intended use for PKGBUILD :( will use plain make to compile and package and pacman to install
+  * ~~Create PKGBUILD for makepkg on arch. (should be trivial once i have this git repo set up properly... yes im a nub)~~ - created one, copy to another folder to run or else it will mess up source directory!!!
