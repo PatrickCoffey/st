@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "monofur for Powerline:pixelsize=30:style=SemiCondensed:antialias=true";
+static char font[] = "monofur for Powerline:pixelsize=30:style=SemiCondensed:antialias=true:autohint=true";
 static int borderpx = 2;
 #define histsize 10000
 

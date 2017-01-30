@@ -16,7 +16,7 @@ themes = []
 
 config_start = []
 config_theme = []
-config_end = ["// THEME_END"]
+config_end = []
 
 def usage():
     msg = """chtheme.py - Change st themes with a simple tool.
@@ -41,6 +41,7 @@ def parse_def_config():
                 for line in f:
                     # throw away these lines between tags
                     if close_tag in line:
+                        config_end.append(line)
                         for line in f:
                             config_end.append(line)
 
