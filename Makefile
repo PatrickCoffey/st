@@ -60,7 +60,7 @@ uninstall:
 theme:  clean
 	@echo replacing config.h with $(ST_THEME) themed version of config.def.h
 	python chtheme.py $(ST_THEME) > config.h
-	@echo themed ($(ST_THEME)) config.h created!
+	@echo $(ST_THEME) themed config.h created!
 	
 
 .PHONY: all options clean dist install uninstall theme
