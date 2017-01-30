@@ -16,8 +16,11 @@ This is a script that i use to remove ("rm ./config.h") and replace (cp ./config
 
 ### chtheme.py
 This script is used to perform surgery on the config.h file. Themes are sections of the config.h file that define default colours and bg/fg colours. 
+
 You will notice some tags in my config.def.h file that signify the themes starting and end point ("// THEME_START" and "// THEME_END" respectively). The chthemes.py script will use the config.def.h file as a template and insert the text from the .theme file inbetween the tags (any data that was between the tags in config.def.h will be removed).
+
 Themes are stored in the "themes/" directory with an extension of .theme (not compulsory, anything in the theme name after the first "." will be ignored, eg. "derp.theme" is referred to as "derp"), you can check them out to see how simple they are. 
+
 These themes were created from Base16 Xdefault colour schemes from github. By importing them as Xresources into [Terminal.sexy](http://terminal.sexy) and then exporting them as "Simple Terminal" header excerpts, you can quickly and effectively create themes from Base16 colour schemes. :D
 
 ### todo
